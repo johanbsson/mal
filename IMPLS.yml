@@ -44,6 +44,8 @@ IMPL:
   - {IMPL: janet}
   - {IMPL: java}
   - {IMPL: johanj}
+  - {IMPL: johanp}
+  - {IMPL: johanel}
   - {IMPL: java-truffle}
   - {IMPL: jq}
   - {IMPL: js}

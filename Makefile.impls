@@ -36,7 +36,7 @@ wasm_MODE = wasmtime
 
 IMPLS = ada ada.2 awk bash basic bbc-basic c c.2 chuck clojure coffee common-lisp cpp crystal cs d dart \
 	elisp elixir elm erlang es6 factor fantom fennel forth fsharp go groovy gnu-smalltalk \
-	guile haskell haxe hy io janet java johanj  java-truffle js jq julia kotlin livescript logo lua make mal \
+	guile haskell haxe hy io janet java johanj johanp johanel  java-truffle js jq julia kotlin livescript logo lua make mal \
 	matlab miniMAL nasm nim objc objpascal ocaml perl perl6 php picolisp pike plpgsql \
 	plsql powershell prolog ps python python.2 r racket rexx rpython ruby rust scala scheme skew sml \
 	swift swift3 swift4 swift5 tcl ts vala vb vhdl vimscript wasm wren yorick xslt zig
@@ -122,6 +122,7 @@ cs_STEP_TO_PROG =            impls/cs/$($(1)).exe
 d_STEP_TO_PROG =             impls/d/$($(1))
 dart_STEP_TO_PROG =          impls/dart/$($(1)).dart
 elisp_STEP_TO_PROG =         impls/elisp/$($(1)).el
+johanel_STEP_TO_PROG =         impls/johanel/$($(1)).el
 elixir_STEP_TO_PROG =        impls/elixir/lib/mix/tasks/$($(1)).ex
 elm_STEP_TO_PROG =           impls/elm/$($(1)).js
 erlang_STEP_TO_PROG =        impls/erlang/$($(1))
@@ -170,6 +171,7 @@ powershell_STEP_TO_PROG =    impls/powershell/$($(1)).ps1
 prolog_STEP_TO_PROG =        impls/prolog/$($(1)).pl
 ps_STEP_TO_PROG =            impls/ps/$($(1)).ps
 python_STEP_TO_PROG =        impls/python/$($(1)).py
+johanb_STEP_TO_PROG =        impls/johanp/$($(1)).py
 python.2_STEP_TO_PROG =      impls/python.2/$($(1)).py
 r_STEP_TO_PROG =             impls/r/$($(1)).r
 racket_STEP_TO_PROG =        impls/racket/$($(1)).rkt
