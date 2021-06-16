@@ -1,48 +1,41 @@
 package mal;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-
-import mal.readline;
+import java.io.InputStreamReader;
+import java.io.StringReader;
 
 public class step0_repl {
-    // read
-    public static String READ(String str) {
+
+    public static String READ(String str){
+
         return str;
     }
 
-    // eval
-    public static String EVAL(String ast, String env) {
-        return ast;
+    public static String EVAL(String str){
+        return str;
+
     }
 
-    // print
-    public static String PRINT(String exp) {
-        return exp;
+    public static String PRINT(String str){
+        return str;
+
     }
 
-    // repl
-    public static String RE(String env, String str) {
-        return EVAL(READ(str), env);
+    public static String rep(String str){
+
+        return PRINT(EVAL(READ(str)));
     }
 
-    public static void main(String[] args) {
-        String prompt = "user> ";
-
-        if (args.length > 0 && args[0].equals("--raw")) {
-            readline.mode = readline.Mode.JAVA;
-        }
-        while (true) {
-            String line;
-            try {
-                line = readline.readline(prompt);
-                if (line == null) { continue; }
-            } catch (readline.EOFException e) {
-                break;
-            } catch (IOException e) {
-                System.out.println("IOException: " + e.getMessage());
-                break;
-            }
-            System.out.println(PRINT(RE(null, line)));
+    public static void main(String[] args) throws IOException {
+        StringReader sr = new StringReader(args[0]);
+        BufferedReader br = new BufferedReader(sr);
+        String thisLine;
+        while ((thisLine = br.readLine()) != null) {
+            System.out.print("user>");
+            BufferedReader buffer=new BufferedReader(new InputStreamReader(System.in));
+            String s = buffer.readLine();
+            rep(s);
         }
     }
 }
